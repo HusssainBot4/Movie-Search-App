@@ -1,0 +1,63 @@
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove Default Margins */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Better Typography */
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Better Images */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Form Elements */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Lists */
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
