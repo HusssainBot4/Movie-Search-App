@@ -1,0 +1,58 @@
+body {
+
+    font-family: var(--font-family);
+    background: var(--color-background);
+    color: var(--color-text);
+
+}
+
+.app {
+
+    width: min(1200px, 90%);
+    margin-inline: auto;
+    padding-block: var(--space-lg);
+
+}
+
+button {
+
+    padding: .8rem 1.4rem;
+    border-radius: var(--radius-medium);
+    transition: var(--transition);
+
+}
+
+button:hover {
+    opacity: .9;
+}
+
+input {
+
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-medium);
+    border: 1px solid var(--color-border);
+    background:var(--color-surface);
+    color: white;
+
+}
+
+select {
+    padding: .8rem;
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+    color: white;
+}
+
+.movie-card {
+
+    background: var(--color-surface);
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    box-shadow: var(--shadow-small);
+    transition: var(--transition);
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+}
