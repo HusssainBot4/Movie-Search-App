@@ -14,6 +14,10 @@ export async function searchMovies(query, page = 1) {
     return await response.json();
 }
 
+export async function getMovieDetails(movieId) {
+
+}
+
 
 
 
