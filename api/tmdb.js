@@ -15,7 +15,15 @@ export async function searchMovies(query, page = 1) {
 }
 
 export async function getMovieDetails(movieId) {
+    const url = `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`;
 
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error("Movie not found.");
+    }
+
+    return await response.json();
 }
 
 
