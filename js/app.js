@@ -1,5 +1,6 @@
 import { state } from "./state.js";
 import { searchMovies } from "../api/tmdb.js";
+import { renderMovies } from "../ui/renderMovies.js";
 
 const searchInput = document.querySelector("#searchInput");
 const status = document.querySelector("#status");
@@ -26,7 +27,7 @@ async function handleSearch(event) {
         state.movies = data.results;
         state.currentPage = data.page;
         state.totalPages = data.total_pages;
-        console.log(state.movies);
+        renderMovies(state.movies);
     }
     catch (error) {
         state.error = error.message;
