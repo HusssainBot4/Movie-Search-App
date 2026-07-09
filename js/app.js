@@ -1,11 +1,17 @@
 import { state } from "./state.js";
 import { searchMovies } from "../api/tmdb.js";
 import { renderMovies } from "../ui/renderMovies.js";
+import { debounce } from "../utils/debounce.js";
 
 const searchInput = document.querySelector("#searchInput");
 const status = document.querySelector("#status");
 
-searchInput.addEventListener("input", handleSearch);
+const debouncedSearch = debounce(handleSearch, 300);
+searchInput.addEventListener(
+    "input",
+    debouncedSearch
+);
+
 
 
 async function handleSearch(event) {
